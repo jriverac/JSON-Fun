@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
 
-        let url = URL(string: "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=55edd3e40ad347ab804edc2eaa976f99")
+        let url = URL(string: "http://chupes.herokuapp.com/contacts.json")
         
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil
