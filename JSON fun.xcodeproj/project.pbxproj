@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BAEF74F1E5020DF00A4B258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEF74E1E5020DF00A4B258 /* Main.storyboard */; };
 		DE1D3F601DC1E4210091BC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D3F5F1DC1E4210091BC83 /* AppDelegate.swift */; };
 		DE1D3F621DC1E4210091BC83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D3F611DC1E4210091BC83 /* ViewController.swift */; };
-		DE1D3F651DC1E4210091BC83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D3F631DC1E4210091BC83 /* Main.storyboard */; };
 		DE1D3F681DC1E4210091BC83 /* JSON_fun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE1D3F661DC1E4210091BC83 /* JSON_fun.xcdatamodeld */; };
 		DE1D3F6A1DC1E4210091BC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1D3F691DC1E4210091BC83 /* Assets.xcassets */; };
 		DE1D3F6D1DC1E4210091BC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D3F6B1DC1E4210091BC83 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BAEF74E1E5020DF00A4B258 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DE1D3F5C1DC1E4210091BC83 /* JSON fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D3F5F1DC1E4210091BC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1D3F611DC1E4210091BC83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE1D3F641DC1E4210091BC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE1D3F671DC1E4210091BC83 /* JSON_fun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JSON_fun.xcdatamodel; sourceTree = "<group>"; };
 		DE1D3F691DC1E4210091BC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1D3F6C1DC1E4210091BC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				DE1D3F5F1DC1E4210091BC83 /* AppDelegate.swift */,
 				DE1D3F611DC1E4210091BC83 /* ViewController.swift */,
-				DE1D3F631DC1E4210091BC83 /* Main.storyboard */,
+				3BAEF74E1E5020DF00A4B258 /* Main.storyboard */,
 				DE1D3F691DC1E4210091BC83 /* Assets.xcassets */,
 				DE1D3F6B1DC1E4210091BC83 /* LaunchScreen.storyboard */,
 				DE1D3F6E1DC1E4210091BC83 /* Info.plist */,
@@ -94,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = MAGNUMIUM;
 				TargetAttributes = {
 					DE1D3F5B1DC1E4210091BC83 = {
@@ -129,7 +129,7 @@
 			files = (
 				DE1D3F6D1DC1E4210091BC83 /* LaunchScreen.storyboard in Resources */,
 				DE1D3F6A1DC1E4210091BC83 /* Assets.xcassets in Resources */,
-				DE1D3F651DC1E4210091BC83 /* Main.storyboard in Resources */,
+				3BAEF74F1E5020DF00A4B258 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +149,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DE1D3F631DC1E4210091BC83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE1D3F641DC1E4210091BC83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DE1D3F6B1DC1E4210091BC83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -186,6 +178,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -235,6 +228,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -304,6 +298,7 @@
 				DE1D3F731DC1E4210091BC83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
