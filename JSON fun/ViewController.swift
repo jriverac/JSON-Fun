@@ -10,7 +10,91 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var TextFieldName: UITextField!
+    
+    
+    @IBOutlet weak var GetName: UILabel!
+    @IBOutlet weak var Getemail: UILabel!
+    
+     var name2 = " "
+     var email2 = " "
+
+    
+    @IBAction func GetButton(_ sender: Any) {
+        
+       
+        
+        let url = URL(string: "http://chupes.herokuapp.com/contacts.json")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+           
+            if error != nil
+            {
+                print ("ERROR")
+            }
+            else
+            {
+                if let content = data
+                {
+                    do
+                    {
+                        //Array
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        //: Now you can define a function to process each item in the array:
+                        
+                      //  let totalContacts = myJson.count.hashValue
+                          let contador = 0
+                        
+                   //     for _ in contador...totalContacts-1
+                            
+                   //     {
+                            
+                            if let userName = myJson[contador] as? NSDictionary
+                            {
+                                if let name = userName["name"] as? NSString{
+                                    //This could avoid lots of crashes caused by the unexpected data types
+                               
+                                    self.name2 = (userName["name"] as? String)!
+                                    
+                                }
+                            }
+                            
+                        
+                            if let usermail = myJson[contador] as? NSDictionary
+                            {
+                                if let mail = usermail["email"] as? NSString
+                                {
+                                    print("EL mail del user es : \(mail)")
+                                    self.email2 = (usermail["email"] as? String)!
+                                }
+                            }
+                      //      contador += 1 // nos movemos al siguiente elemento
+                     //   }//for
+                   
+
+                    }
+                        
+                    catch
+                    {
+                        
+                    }
+                }
+            }
+        }
+
+        
+        GetName.text = name2
+        Getemail.text = email2
+ 
+        
+      task.resume()
+        
+    }
+    
+    
+    
+    
+    
     
     @IBAction func InsertarButton(_ sender: Any) {
         
@@ -18,7 +102,7 @@ class ViewController: UIViewController {
         //We Indicate the headers is a json format
         
         
-        let name = TextFieldName.text;
+        let name = TextFieldName.text
         let email = "rickhunter08@gmail.com";
         
         print("valor de \(name)");
