@@ -177,6 +177,31 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        let headers = [
+            "content-type": "application/json" ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://chupes.herokuapp.com/contacts/29.json")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "DELETE"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error as Any)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse!)
+            }
+        })
+        
+        dataTask.resume()
+        
+        
+        
+        
     }
     
 
