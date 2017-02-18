@@ -13,7 +13,18 @@
 		DE1D3F681DC1E4210091BC83 /* JSON_fun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE1D3F661DC1E4210091BC83 /* JSON_fun.xcdatamodeld */; };
 		DE1D3F6A1DC1E4210091BC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1D3F691DC1E4210091BC83 /* Assets.xcassets */; };
 		DE1D3F6D1DC1E4210091BC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D3F6B1DC1E4210091BC83 /* LaunchScreen.storyboard */; };
+		F7B5B7241E582DEE00BC2CD7 /* JSON_funTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B5B7231E582DEE00BC2CD7 /* JSON_funTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7B5B7261E582DEE00BC2CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE1D3F541DC1E4210091BC83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1D3F5B1DC1E4210091BC83;
+			remoteInfo = "JSON fun";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3BAEF74E1E5020DF00A4B258 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -24,10 +35,20 @@
 		DE1D3F691DC1E4210091BC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1D3F6C1DC1E4210091BC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE1D3F6E1DC1E4210091BC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7B5B7211E582DEE00BC2CD7 /* JSON funTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSON funTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B5B7231E582DEE00BC2CD7 /* JSON_funTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_funTests.swift; sourceTree = "<group>"; };
+		F7B5B7251E582DEE00BC2CD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DE1D3F591DC1E4210091BC83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B5B71E1E582DEE00BC2CD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1D3F5E1DC1E4210091BC83 /* JSON fun */,
+				F7B5B7221E582DEE00BC2CD7 /* JSON funTests */,
 				DE1D3F5D1DC1E4210091BC83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1D3F5C1DC1E4210091BC83 /* JSON fun.app */,
+				F7B5B7211E582DEE00BC2CD7 /* JSON funTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +88,15 @@
 				DE1D3F661DC1E4210091BC83 /* JSON_fun.xcdatamodeld */,
 			);
 			path = "JSON fun";
+			sourceTree = "<group>";
+		};
+		F7B5B7221E582DEE00BC2CD7 /* JSON funTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5B7231E582DEE00BC2CD7 /* JSON_funTests.swift */,
+				F7B5B7251E582DEE00BC2CD7 /* Info.plist */,
+			);
+			path = "JSON funTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,20 +119,42 @@
 			productReference = DE1D3F5C1DC1E4210091BC83 /* JSON fun.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7B5B7201E582DEE00BC2CD7 /* JSON funTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7B5B7281E582DEE00BC2CD7 /* Build configuration list for PBXNativeTarget "JSON funTests" */;
+			buildPhases = (
+				F7B5B71D1E582DEE00BC2CD7 /* Sources */,
+				F7B5B71E1E582DEE00BC2CD7 /* Frameworks */,
+				F7B5B71F1E582DEE00BC2CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7B5B7271E582DEE00BC2CD7 /* PBXTargetDependency */,
+			);
+			name = "JSON funTests";
+			productName = "JSON funTests";
+			productReference = F7B5B7211E582DEE00BC2CD7 /* JSON funTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DE1D3F541DC1E4210091BC83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = MAGNUMIUM;
 				TargetAttributes = {
 					DE1D3F5B1DC1E4210091BC83 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7X97G3MQ75;
 						ProvisioningStyle = Automatic;
+					};
+					F7B5B7201E582DEE00BC2CD7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE1D3F5B1DC1E4210091BC83;
 					};
 				};
 			};
@@ -118,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				DE1D3F5B1DC1E4210091BC83 /* JSON fun */,
+				F7B5B7201E582DEE00BC2CD7 /* JSON funTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +185,13 @@
 				DE1D3F6D1DC1E4210091BC83 /* LaunchScreen.storyboard in Resources */,
 				DE1D3F6A1DC1E4210091BC83 /* Assets.xcassets in Resources */,
 				3BAEF74F1E5020DF00A4B258 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B5B71F1E582DEE00BC2CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +208,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7B5B71D1E582DEE00BC2CD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B5B7241E582DEE00BC2CD7 /* JSON_funTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7B5B7271E582DEE00BC2CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE1D3F5B1DC1E4210091BC83 /* JSON fun */;
+			targetProxy = F7B5B7261E582DEE00BC2CD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DE1D3F6B1DC1E4210091BC83 /* LaunchScreen.storyboard */ = {
@@ -257,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7X97G3MQ75;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "JSON fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumium.JSON-fun";
@@ -270,12 +348,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7X97G3MQ75;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "JSON fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumium.JSON-fun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F7B5B7291E582DEE00BC2CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "JSON funTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "QXI.JSON-funTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSON fun.app/JSON fun";
+			};
+			name = Debug;
+		};
+		F7B5B72A1E582DEE00BC2CD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "JSON funTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "QXI.JSON-funTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSON fun.app/JSON fun";
 			};
 			name = Release;
 		};
@@ -299,6 +405,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F7B5B7281E582DEE00BC2CD7 /* Build configuration list for PBXNativeTarget "JSON funTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7B5B7291E582DEE00BC2CD7 /* Debug */,
+				F7B5B72A1E582DEE00BC2CD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
