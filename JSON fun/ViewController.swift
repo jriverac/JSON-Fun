@@ -177,11 +177,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // delete function
         
         let headers = [
-            "content-type": "application/json" ]
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            "postman-token": "2e03108b-3909-fa73-7c6b-abb2f210534a"
+        ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "http://chupes.herokuapp.com/contacts/29.json")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "http://chupes.herokuapp.com/contacts/47")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "DELETE"
@@ -190,14 +194,15 @@ class ViewController: UIViewController {
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
-                print(error as Any)
+                print(error!)
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(httpResponse!)
+                print(httpResponse as Any)
             }
         })
         
         dataTask.resume()
+        
         
         
         
