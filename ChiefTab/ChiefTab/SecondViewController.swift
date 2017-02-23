@@ -38,11 +38,42 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         {
             let contactToErase = AContacts[indexPath.row][2]
             print("borraremos \(contactToErase)")
+            
+            // delete function
+            
+            let headers = [
+                "content-type": "application/json",
+                "cache-control": "no-cache",
+                "postman-token": "2e03108b-3909-fa73-7c6b-abb2f210534a"
+            ]
+            
+            let request = NSMutableURLRequest(url: NSURL(string: ("http://chupes.herokuapp.com/contacts/" + contactToErase))! as URL,
+                                              cachePolicy: .useProtocolCachePolicy,
+                                              timeoutInterval: 10.0)
+            request.httpMethod = "DELETE"
+            request.allHTTPHeaderFields = headers
+            
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                if (error != nil) {
+                    print(error!)
+                } else {
+                    let httpResponse = response as? HTTPURLResponse
+                    print(httpResponse as Any)
+                    
+                }
+            })
+            
+            
             AContacts.remove(at: indexPath.row)
-            // Esta onda esta bien gacha 
+            
             //Contacts.remove(at: indexPath.row)
             
             myTableView.reloadData()
+            
+            
+            dataTask.resume()
+
         }
         
         
