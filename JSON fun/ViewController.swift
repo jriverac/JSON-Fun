@@ -185,7 +185,7 @@ class ViewController: UIViewController {
             "postman-token": "2e03108b-3909-fa73-7c6b-abb2f210534a"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "http://chupes.herokuapp.com/contacts/47")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "http://chupes.herokuapp.com/contacts/46")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "DELETE"
