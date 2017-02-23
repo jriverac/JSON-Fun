@@ -39,7 +39,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             let contactToErase = AContacts[indexPath.row][2]
             print("borraremos \(contactToErase)")
             AContacts.remove(at: indexPath.row)
-            
+            // Esta onda esta bien gacha 
             //Contacts.remove(at: indexPath.row)
             
             myTableView.reloadData()
