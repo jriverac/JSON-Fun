@@ -8,7 +8,8 @@
 
 import UIKit
 
-var Contacts = [String()]
+//var Contacts = [String()]
+var AContacts = Array(repeating:Array(repeating: String(),count:3),count:0)
 
 
 class FirstViewController: UIViewController {
@@ -34,34 +35,41 @@ class FirstViewController: UIViewController {
                         let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                         //: Now you can define a function to process each item in the array:
                         
-                        //  let totalContacts = myJson.count.hashValue
-                        let contador = 0
+                        let totalContacts = myJson.count.hashValue
+                        var contador = 0
                         
-                        //     for _ in contador...totalContacts-1
+                             for _ in contador...totalContacts-1
                         
-                        //     {
+                             {
                         
                         if let userName = myJson[contador] as? NSDictionary
                         {
                             if let name = userName["name"] as? NSString{
                                 //This could avoid lots of crashes caused by the unexpected data types
-                            print("**** valor name \(name)")
-                            Contacts.append(name as String!)
-                            }
-                        }
-                        
-                        /*
-                        if let usermail = myJson[contador] as? NSDictionary
-                        {
-                            if let mail = usermail["email"] as? NSString
-                            {
-                                print("EL mail del user es : \(mail)")
-                                self.email2 = (usermail["email"] as? String)!
-                            }
-                        }
-                        //      contador += 1 // nos movemos al siguiente elemento
-                        //   }//for
-                        */
+                                //print("**** valor name \(name)")
+                                
+                                if let usermail = myJson[contador] as? NSDictionary
+                                {
+                                    if let mail = usermail["email"] as? NSString
+                                    {
+                                       
+                                        if let id = usermail["id"] as? NSInteger
+                                        {
+                                            
+                                            let IdString = String(id)
+                                            AContacts.append([name as String, mail as String, IdString])
+                                            //Contacts.append((name as String) + (mail as String))
+                                            
+                                              print(AContacts[contador])
+                                        }
+                                    }
+                                } // if mail
+                                
+                            } // if name
+                        } // If Json Dictionary
+                             contador += 1 // nos movemos al siguiente elemento
+                        }//for
+                    
                     
                         
                     }
