@@ -8,12 +8,75 @@
 
 import UIKit
 
+
+
+
+
+
 //var Contacts = [String()]
 var AContacts = Array(repeating:Array(repeating: String(),count:3),count:0)
 
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textfieldEmail: UITextField!
+    
+    
+    @IBAction func buttonInsertar(_ sender: Any) {
+        
+        let name = textFieldName.text!
+        let email = textfieldEmail.text!
+        
+        print("valor de \(textFieldName.text?.characters)");
+        
+        
+        let headers = [
+            "content-type": "application/json"
+        ]
+        
+        
+        
+        let json = ["contact": [
+            "name": "\(name)",
+            "email": "\(email)"
+            ]] as [String : Any]
+        
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        
+        //create post request
+        
+        let myUrl = URL(string: "http://chupes.herokuapp.com/contacts.json");
+        var request = URLRequest(url:myUrl!)
+        request.httpMethod = "POST"// Define method
+        request.allHTTPHeaderFields=headers;
+        request.httpBody=jsonData;
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(error)")
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(response)")
+        }
+    
+        task.resume()
+        
+        
+        
+    
+        
+        
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
