@@ -14,6 +14,8 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     @IBOutlet weak var myTableView: UITableView!
     
+    
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return AContacts.count
@@ -34,6 +36,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
+        
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             let contactToErase = AContacts[indexPath.row][2]
@@ -87,6 +90,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
         
     }
 
